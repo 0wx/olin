@@ -1,5 +1,8 @@
 # Olin PWA 
-Deployed app: https://olin.pages.dev/
+Deployed app: 
+- Home: https://olin.pages.dev/
+- Login: https://olin.pages.dev/login
+- Register: https://olin.pages.dev/register
 
 ## Question 1
 
