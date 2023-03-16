@@ -1,23 +1,75 @@
-# Progressive Web App Example
+# Olin PWA
 
-This example uses [`next-pwa`](https://github.com/shadowwalker/next-pwa) to create a progressive web app (PWA) powered by [Workbox](https://developers.google.com/web/tools/workbox/).
+## Question 1
 
-## Deploy your own
+Create a function to count the number of times a number appears in the input
+parameter. For example, if the number entered in the parameter is 776265327, then
+the result is:
+The number 0 appears 0 times
+The number 1 appears 0 times
+The number 2 appears 2 times
+The number 3 appears 1 time
+The number 4 appears 0 times
+The number 5 appears 1 time
+The number 6 appears 2 times
+The number 7 appears 3 times
+The number 8 appears 0 times
+The number 9 appears 0 times
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+Answer:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/progressive-web-app&project-name=progressive-web-app&repository-name=progressive-web-app)
+```ts
+function numberAppearances(number: number): void {
+  const numberArray = number.toString().split('')
+  const numberCount: { [key: string]: number } = {}
 
-## How to use
+  numberArray.forEach((number) => {
+    if (!numberCount[number]) numberCount[number] = 0
+    
+    numberCount[number]++
+  })
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example progressive-web-app progressive-web-app
-# or
-yarn create next-app --example progressive-web-app progressive-web-app
-# or
-pnpm create next-app --example progressive-web-app progressive-web-app
+  for (let i = 0; i < 10; i++) {
+    console.log(`The number ${i} appears ${numberCount[i] || 0} times`)
+  }
+}
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Question 2
+
+There is a class called OrderItem which has properties ID, OrderID, ProductID, Price,
+Qty. Create a function to calculate the total price of the order with the parameter in
+the function in the form of an array of OrderItems.
+
+Answer:
+
+```ts
+class OrderItem {
+  id: number
+  orderId: number
+  productId: number
+  price: number
+  qty: number
+
+  constructor(
+    id: number,
+    orderId: number,
+    productId: number,
+    price: number,
+    qty: number
+  ) {
+    this.id = id
+    this.orderId = orderId
+    this.productId = productId
+    this.price = price
+    this.qty = qty
+  }
+}
+
+function totalPrice(orderItems: OrderItem[]): number {
+  return orderItems.reduce(
+    (total, orderItem) => total + orderItem.price * orderItem.qty,
+    0
+  )
+}
+```
