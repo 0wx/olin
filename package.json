@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "daisyui": "^2.51.3",
     "jotai": "^2.0.3",
     "next": "latest",
