@@ -85,31 +85,38 @@ function salesWithRandomSales() {
 const salesByCategoryAtom = atom([
   {
     category: 'Offline',
-    sales: 110,
+    sales: 70,
+    color: '#FFC107',
   },
   {
     category: 'AloDoc',
-    sales: 106,
+    sales: 41,
+    color: '#FF9800',
   },
   {
     category: 'HaloDoc',
     sales: 108,
+    color: '#FF5722',
   },
   {
     category: 'SehatQ',
-    sales: 109,
+    sales: 12,
+    color: '#F44336',
   },
   {
     category: 'GrabHealth',
-    sales: 110,
+    sales: 11,
+    color: '#E91E63',
   },
   {
     category: 'Tokopedia',
-    sales: 111,
+    sales: 51,
+    color: '#9C27B0',
   },
   {
     category: 'Shopee',
-    sales: 112,
+    sales: 41,
+    color: '#673AB7',
   },
 ])
 
