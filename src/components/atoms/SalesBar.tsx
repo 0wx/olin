@@ -21,7 +21,7 @@ export const SalesBar: FC<{
   return (
     <div className='h-full w-7 flex flex-col justify-end items-center gap-2'>
       <div
-        className={`flex w-full rounded  transition-all hover:scale-105 ${
+        className={`flex w-full rounded  transition-all hover:scale-105 hover:shadow ${
           active ? 'bg-secondary' : 'bg-primary'
         }`}
         style={{ height: `${height}%` }}
