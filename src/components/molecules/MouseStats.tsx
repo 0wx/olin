@@ -24,7 +24,7 @@ export const MouseStats: FC = () => {
     <>
       {hovering && (
         <div
-          className='fixed transition-all z-10 flex gap-2 bg-black rounded px-1 text-white justify-center items-center font-bold'
+          className='fixed transition-all duration-75 z-10 flex gap-2 bg-black rounded px-1 text-white justify-center items-center font-bold'
           style={{
             left: position.x + 20,
             top: position.y - 20,
@@ -32,7 +32,7 @@ export const MouseStats: FC = () => {
           }}
         >
           {growth() > 0 ? (
-            <IoTrendingUp size={20} color='green' />
+            <IoTrendingUp size={20} color='#73ff54' />
           ) : (
             <IoTrendingDown size={20} color='red' />
           )}
