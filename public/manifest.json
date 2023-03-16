@@ -1,6 +1,6 @@
 {
-  "name": "Next.JS Progressive Web App",
-  "short_name": "Next PWA",
+  "name": "Olin Web App",
+  "short_name": "Olin",
   "theme_color": "#ffffff",
   "background_color": "#004740",
   "display": "fullscreen",
