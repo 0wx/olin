@@ -81,9 +81,11 @@ export default function Login() {
                 Ingat saya
               </label>
             </div>
-            <div className='text-red-500 font-semibold'>Lupa Password?</div>
+            <div className='text-red-500'>Lupa Password?</div>
           </div>
-          <button className='btn btn-primary w-full'>Masuk</button>
+          <Link href='/'>
+            <button className='btn btn-primary w-full'>Masuk</button>
+          </Link>
           <div className='flex justify-center gap-2'>
             Belum Registrasi? Silahkan klik{' '}
             <Link href='/register'>
